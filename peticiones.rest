@@ -1,0 +1,34 @@
+@host=http://localhost:3000
+
+POST {{host}}/api/autores
+Content-Type: application/json
+
+{
+    "nombre":"Plato",
+    "email":"test@gmail.com",
+    "imagen":"plato.png"
+}
+###
+
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+    "titulo":"Plato",
+    "descripcion":"La belleza del ser está más en el no ser que en el ser. ¿Ser o no ser?",
+    "fecha":"2023-05-22 21:59:27",
+    "categoria": "sabiduría",
+    "autor_id":1
+}
+
+
+###
+GET {{host}}/api/posts
+
+
+###
+GET {{host}}/api/posts/1
+
+
+###
+GET {{host}}/api/autores
